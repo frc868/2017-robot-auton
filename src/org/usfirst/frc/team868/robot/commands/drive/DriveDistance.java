@@ -56,7 +56,7 @@ public class DriveDistance extends TimedCommand {
 	}
 	//TODO should we be using a builder?
 	public DriveDistance(double cm) { //TODO argument for speed
-		this(cm, 3, false);
+		this(cm, 10, false);
 	}
 	
 	public DriveDistance(double cm, boolean usePressurePlate) {

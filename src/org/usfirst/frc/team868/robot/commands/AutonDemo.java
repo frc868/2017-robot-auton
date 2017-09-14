@@ -7,22 +7,23 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
  */
 public class AutonDemo extends CommandGroup {
 
-    public AutonDemo() {
-        // Add Commands here:
-        // e.g. addSequential(new Command1());
-        //      addSequential(new Command2());
-        // these will run in order.
-
-        // To run multiple commands at the same time,
-        // use addParallel()
-        // e.g. addParallel(new Command1());
-        //      addSequential(new Command2());
-        // Command1 and Command2 will run in parallel.
-
-        // A command group will require all of the subsystems that each member
-        // would require.
-        // e.g. if Command1 requires chassis, and Command2 requires arm,
-        // a CommandGroup containing them would require both the chassis and the
-        // arm.
+    public AutonDemo() {    	
+    	/*
+    	 * 2017 PRESEASON AUTON CHALLENGE (RATCHET)
+    	 * 
+    	 * Below, add commands to be run in autonomous mode to complete the auton challenge. 
+    	 * Use addSequential(command) to add the commands in series. 
+    	 * 
+    	 * Commands available to you:
+    	 * DriveDistance(cm) - drive forward/backward a certain distance, in cm
+    	 * TurnByAngle(angle) - turn to an angle relative to the current direction, in degrees
+    	 * TurnToAngle(angle) - turn to an absolute angle, in degrees
+    	 * 
+    	 * EXAMPLE:
+    	 * addSequential(new DriveDistance(50)); //drive forward 50 CM
+    	 * addSequential(new TurnByAngle(30)); //turn to the right 30 degrees
+    	 * addSequential(new DriveDistance(-20)); //back up 20 CM
+    	 * addSequential(new TurnToAngle(180)); //turn around to exactly 180 degrees (not relative)
+    	 */
     }
 }

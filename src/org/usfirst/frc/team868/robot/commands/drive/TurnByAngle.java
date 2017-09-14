@@ -15,7 +15,7 @@ import lib.util.HoundMath;
 /**
  *
  */
-public class TurnByAngleGyro extends TimedCommand {
+public class TurnByAngle extends TimedCommand {
 	
 	private DriveSubsystem motors;
 	private PIDController controller;
@@ -28,7 +28,7 @@ public class TurnByAngleGyro extends TimedCommand {
 	 * (left is negative, right is positive)
 	 * @param angle in degrees
 	 */
-    public TurnByAngleGyro(double angle, double timeout) {
+    public TurnByAngle(double angle, double timeout) {
     	super(timeout);
     	motors = DriveSubsystem.getInstance();
     	requires(motors);
@@ -60,7 +60,7 @@ public class TurnByAngleGyro extends TimedCommand {
 	controller.setAbsoluteTolerance(1.5);
     }
     
-    public TurnByAngleGyro(double angle) {
+    public TurnByAngle(double angle) {
     	this(angle, 3);
     }
 

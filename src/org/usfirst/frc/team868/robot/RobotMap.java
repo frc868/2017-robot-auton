@@ -46,7 +46,7 @@ public interface RobotMap {
 		final double COUNTS_PER_CM = 9925.0 / 140.0; //70
 		final double CM_PER_COUNT = 1.0 / COUNTS_PER_CM;
 		final double MIN_DRIVE_SPEED = .27;
-		final double MAX_AUTON_DRIVE_SPEED = .65;//.45;
+		final double MAX_AUTON_DRIVE_SPEED = 0.4; //.65;//.45;
 	}
 	
 	public interface Feeder {
