@@ -1,17 +1,9 @@
 package org.usfirst.frc.team868.robot.commands;
 
-import org.usfirst.frc.team868.robot.subsystems.AgitatorSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.ClimberSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.ColorPixySubsystem;
 import org.usfirst.frc.team868.robot.subsystems.DriveSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.FeederSubsystem;
 import org.usfirst.frc.team868.robot.subsystems.GearCollectorSubsystem;
 import org.usfirst.frc.team868.robot.subsystems.GearEjectorSubsystem;
 import org.usfirst.frc.team868.robot.subsystems.GyroSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.IRPixySubsystem;
-import org.usfirst.frc.team868.robot.subsystems.LidarSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.ShooterSubsystem;
-import org.usfirst.frc.team868.robot.subsystems.TurretRotationSubsystem;
 
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Timer;
@@ -54,20 +46,10 @@ public class UpdateSmartDashboard extends Command {
     	// I don't know, last year's robot was 1/200, so I assumed that it would be fine. (cjd)
     	
     	if(time.get() >= REFRESH_RATE){
-    		AgitatorSubsystem.getInstance().updateSD();
-    		ClimberSubsystem.getInstance().updateSD();
-    		ColorPixySubsystem.getInstance().updateSD();
     		DriveSubsystem.getInstance().updateSD();
-    		FeederSubsystem.getInstance().updateSD();
     		GearCollectorSubsystem.getInstance().updateSD();
     		GearEjectorSubsystem.getInstance().updateSD();
-//			GearFlashlightSubsystem.getInstance().updateSD();
     		GyroSubsystem.getInstance().updateSD();
-    		IRPixySubsystem.getInstance().updateSD();
-    		LidarSubsystem.getInstance().updateSmartDashboard();
-//			ShooterFlashlightSubsystem.getInstance().updateSD();
-    		ShooterSubsystem.getInstance().updateSD();
-    		TurretRotationSubsystem.getInstance().updateSD();
     		time.reset();
     		
     		counts++;

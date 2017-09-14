@@ -1,16 +1,15 @@
 
 package org.usfirst.frc.team868.robot;
 
+import org.usfirst.frc.team868.robot.commands.AutonDemo;
+import org.usfirst.frc.team868.robot.commands.UpdateSmartDashboard;
+import org.usfirst.frc.team868.robot.subsystems.DriveSubsystem;
+import org.usfirst.frc.team868.robot.subsystems.GearCollectorSubsystem;
+import org.usfirst.frc.team868.robot.subsystems.GyroSubsystem;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
-import org.usfirst.frc.team868.robot.RobotMap.State;
-import org.usfirst.frc.team868.robot.commands.UpdateSmartDashboard;
-import org.usfirst.frc.team868.robot.commands.auton.AutonLauncher;
-import org.usfirst.frc.team868.robot.commands.subsystems.shooter.AgitatorCommand;
-import org.usfirst.frc.team868.robot.commands.subsystems.shooter.FeederCommand;
-import org.usfirst.frc.team868.robot.subsystems.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -83,8 +82,7 @@ public class Robot extends IterativeRobot {
 	 */
     public void autonomousInit() {
     	resetRobot();
-        new AutonLauncher().start();
-        
+    	new AutonDemo().start();
     }
 
     /**
@@ -109,21 +107,9 @@ public class Robot extends IterativeRobot {
      * This function gets called to initialize the subsystems
      */
 	private void initSubsystems() {
-		AgitatorSubsystem.getInstance();
-		ClimberSubsystem.getInstance();
-		CameraSubsystem.getRearInstance();
-		ColorPixySubsystem.getInstance();
 		DriveSubsystem.getInstance();
 		GearCollectorSubsystem.getInstance();
-//		GearFlashlightSubsystem.getInstance();
 		GyroSubsystem.getInstance();
-		IRPixySubsystem.getInstance();
-		LidarSubsystem.getInstance();
-		LEDSubsystem.getInstance();
-		FeederSubsystem.getInstance();
-//		ShooterFlashlightSubsystem.getInstance();
-		ShooterSubsystem.getInstance();
-		TurretRotationSubsystem.getInstance();
 	}
     
     /**
@@ -135,8 +121,6 @@ public class Robot extends IterativeRobot {
     
     private void resetRobot() {
     	Scheduler.getInstance().removeAll();
-    	new AgitatorCommand(State.OFF).start();
-    	new FeederCommand(State.OFF).start();
     	new UpdateSmartDashboard().start();
     }
 }

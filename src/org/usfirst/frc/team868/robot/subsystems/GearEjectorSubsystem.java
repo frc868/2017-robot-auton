@@ -1,7 +1,7 @@
 package org.usfirst.frc.team868.robot.subsystems;
 
 import org.usfirst.frc.team868.robot.RobotMap;
-import org.usfirst.frc.team868.robot.commands.subsystems.gear.GearEjectorAutomaticCommand;
+import org.usfirst.frc.team868.robot.commands.gear.GearEjectorAutomaticCommand;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Solenoid;

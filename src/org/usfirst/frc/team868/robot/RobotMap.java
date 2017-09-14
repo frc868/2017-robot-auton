@@ -1,7 +1,5 @@
 package org.usfirst.frc.team868.robot;
 
-import org.usfirst.frc.team868.robot.commands.auton.CalculateGeometry;
-
 import edu.wpi.first.wpilibj.SerialPort;
 
 /**
@@ -165,44 +163,5 @@ public interface RobotMap {
 		final double MAX_VOLTAGE = 5;
 		final double LEFT_LIMIT_TO_FORWARD = 40; //degrees
 		final double RAMP_RATE = 1;
-	}
-	public interface AutonValues {
-		
-		//VALUES ARE IN CM
-		
-		//Baseline from Start
-		double DISTANCE_TO_BASELINE = 280;// Will likely go farther than baseline
-		double BASELINE_MIDDLE_DISTANCE = 199;
-		
-		//Gear from Start
-		double WALL_TO_HOOK = BASELINE_MIDDLE_DISTANCE;//Distance from alliance wall to the middle hook.
-		double GEAR_AUTON_DIST_1 = 170;//NOT ACCURATE: Distance until in line with hook if on sides.
-		double GEAR_AUTON_DIST_2 = 198;
-		double HOOK_BACKOFF = 45;//Arbitrary value: how far to back away from the hook after placing the gear.
-		
-		//Gear to Hopper
-		double distanceAcrossToHopperFromGearPos2 = 411.5 - (107 /Math.sqrt(2)) - 91;
-		double distanceForwardToHitHopperAfterDoingGearPos2 = 76 + 33.5 + HOOK_BACKOFF;
-		double angleToTurnToHitHopperAfterDoingGearPos2 = CalculateGeometry.getAngle(66, 107 / Math.sqrt(2));
-		double distanceToBackUpToHitHopperAfterDoingGearPos2 = CalculateGeometry.getHypotenuse(66, 107 / Math.sqrt(2));
-		double distanceToBackupFromGearPos3 = CalculateGeometry.getSide(155.25, 25.25);
-		double distanceToGoToHopperFromGearPos3 = 205.75 - 91 -10;
-		double angleToTurnToHitHopperAfterDoingGearPos3 = CalculateGeometry.getAngle(28, 10);
-		double distanceToBackUpToHitHopperAfterDoingGearPos3 = CalculateGeometry.getHypotenuse(28, 10);
-		
-		//Gear to Neutral
-		double distanceToBackupMoreFromPos1orPos3 = 75;
-		double distanceAcrossFromPos2 = 300;
-		double distanceToNeutralZoneFromGear = 420;
-	
-		//Hopper from Start
-		
-		
-		//Hopper to Neutral
-		double distanceForwardBeforeTurning = 101;
-		double distanceToNeutralFromHopper = 33.5;
-		
-		//Hopper to Gear
-		
 	}
 }
