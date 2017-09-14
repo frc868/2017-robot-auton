@@ -1,8 +1,7 @@
 package org.usfirst.frc.team868.robot.commands;
 
 import org.usfirst.frc.team868.robot.commands.drive.DriveDistance;
-import org.usfirst.frc.team868.robot.commands.drive.TurnByAngle;
-import org.usfirst.frc.team868.robot.commands.drive.TurnToAngle;
+import org.usfirst.frc.team868.robot.commands.drive.TurnAngle;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
@@ -16,12 +15,11 @@ public class AutonDemo extends CommandGroup {
     	 * 2017 PRESEASON AUTON CHALLENGE (RATCHET)
     	 * 
     	 * Below, add commands to be run in autonomous mode to complete the auton challenge. 
-    	 * Use addSequential(command) to add the commands in series. 
+    	 * Use addSequential(new Command()) to add the commands in series. 
     	 * 
     	 * Commands available to you:
     	 * DriveDistance(cm) - drive forward/backward a certain distance, in cm
-    	 * TurnByAngle(angle) - turn to an angle relative to the current direction, in degrees
-    	 * TurnToAngle(angle) - turn to an absolute angle, in degrees
+    	 * TurnAngle(angle) - turn a certain number of degrees
     	 * 
     	 * EXAMPLE:
     	 * addSequential(new DriveDistance(50)); //drive forward 50 CM
@@ -31,5 +29,8 @@ public class AutonDemo extends CommandGroup {
     	 */
     	
     	addSequential(new DriveDistance(20));
+    	addSequential(new TurnAngle (90));
+    	addSequential(new DriveDistance(30));
+    	
     }
 }
