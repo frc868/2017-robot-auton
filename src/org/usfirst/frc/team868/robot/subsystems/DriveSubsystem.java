@@ -160,12 +160,13 @@ public class DriveSubsystem extends Subsystem {
 		}else{
 			count += getLeftEncoder();
 		}
-		if(RobotMap.Drive.RIGHT_IS_INVERTED){
-			count -= getRightEncoder();
-		}else{
-			count += getRightEncoder();
-		}
-		return count/2;
+//		if(RobotMap.Drive.RIGHT_IS_INVERTED){
+//			count -= getRightEncoder();
+//		}else{
+//			count += getRightEncoder();
+//		}
+//		return count/2;
+		return count;
 	}
 	/**
 	 * Attempts to record the movement of the motors.
