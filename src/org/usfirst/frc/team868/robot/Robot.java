@@ -7,6 +7,7 @@ import org.usfirst.frc.team868.robot.subsystems.DriveSubsystem;
 import org.usfirst.frc.team868.robot.subsystems.GearCollectorSubsystem;
 import org.usfirst.frc.team868.robot.subsystems.GyroSubsystem;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -54,6 +55,7 @@ public class Robot extends IterativeRobot {
     	initSubsystems();
     	resetRobot();
 		OI.getInstance().initialize();
+		new Compressor().setClosedLoopControl(false);
 		
 
     }
