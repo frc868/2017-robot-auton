@@ -4,6 +4,7 @@ import org.usfirst.frc.team868.robot.commands.drive.DriveDistance;
 import org.usfirst.frc.team868.robot.commands.drive.TurnAngle;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import edu.wpi.first.wpilibj.command.WaitCommand;
 
 /**
  *
@@ -20,17 +21,17 @@ public class AutonDemo extends CommandGroup {
     	 * Commands available to you:
     	 * DriveDistance(cm) - drive forward/backward a certain distance, in cm
     	 * TurnAngle(angle) - turn a certain number of degrees
-    	 * 
-    	 * EXAMPLE:
-    	 * addSequential(new DriveDistance(50)); //drive forward 50 CM
-    	 * addSequential(new TurnByAngle(30)); //turn to the right 30 degrees
-    	 * addSequential(new DriveDistance(-20)); //back up 20 CM
-    	 * addSequential(new TurnToAngle(180)); //turn around to exactly 180 degrees (not relative)
+    	 * WaitCommand(seconds) - number of seconds to pause for
     	 */
     	
-    	addSequential(new DriveDistance(20));
-    	addSequential(new TurnAngle (90));
-    	addSequential(new DriveDistance(30));
+    	//EXAMPLE CODE
+    	//PLACE YOUR CODE BELOW
     	
+    	addSequential(new DriveDistance(20));	//drive forward 20 cm
+    	addSequential(new WaitCommand(1));		//wait 1 second
+    	addSequential(new TurnAngle (90));		//turn right 90 degrees
+    	addSequential(new DriveDistance(30));	//back up 30 cm
+    	
+    	//DON'T PLACE CODE BELOW THIS LINE
     }
 }
